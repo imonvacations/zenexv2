@@ -1,0 +1,1429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZENEX · Intelligent systems for serious teams</title>
+  <meta name="description" content="ZENEX is an intelligent systems studio. AI automation, web platforms, and integration — quietly engineered." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('zenex-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================
+       Header
+       ========================================================= -->
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand" aria-label="ZENEX home">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10.4" stroke="currentColor" stroke-width="1.4" />
+        <path d="M 1.6 12 A 10.4 10.4 0 0 0 22.4 12 Z" fill="currentColor" />
+        <path d="M 1.6 12 Q 12 8 22.4 12" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.55" />
+      </svg>
+      <span>ZENEX</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#details" data-i18n="nav.web">Practices</a>
+      <a href="#process" data-i18n="nav.process">How it works</a>
+      <a href="#principles" data-i18n="nav.principles">Principles</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-right">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.5" />
+          <path d="M12 2.5v2.2M12 19.3v2.2M21.5 12h-2.2M4.7 12H2.5M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6M18.4 18.4l-1.6-1.6M7.2 7.2 5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-divider" aria-hidden="true">·</span>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <a class="btn primary nav-cta" href="#contact">
+        <span data-i18n="nav.cta">Start a project</span> <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- =========================================================
+         Hero
+         ========================================================= -->
+    <section class="hero">
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 600 600">
+          <defs>
+            <radialGradient id="ocean" cx="0.5" cy="0.7" r="0.7">
+              <stop offset="0" stop-color="#143A66" />
+              <stop offset="1" stop-color="#0B1F3A" />
+            </radialGradient>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FAF7F1" stop-opacity="0" />
+              <stop offset="1" stop-color="#4CC6D6" stop-opacity="0.12" />
+            </linearGradient>
+            <clipPath id="discClip"><circle cx="300" cy="300" r="260" /></clipPath>
+          </defs>
+          <circle cx="300" cy="300" r="260" fill="none" stroke="#0B1F3A" stroke-width="1.2" opacity="0.35" />
+          <g class="rings" opacity="0.35">
+            <circle cx="300" cy="300" r="232" fill="none" stroke="#0B1F3A" stroke-width="0.6" />
+            <circle cx="300" cy="300" r="204" fill="none" stroke="#0B1F3A" stroke-width="0.6" />
+            <circle cx="300" cy="300" r="176" fill="none" stroke="#0B1F3A" stroke-width="0.5" />
+            <circle cx="300" cy="300" r="148" fill="none" stroke="#0B1F3A" stroke-width="0.5" />
+          </g>
+          <g clip-path="url(#discClip)">
+            <rect x="40" y="300" width="520" height="260" fill="url(#ocean)" />
+            <rect x="40" y="40" width="520" height="260" fill="url(#sky)" />
+            <g stroke="#4CC6D6" stroke-width="0.6" fill="none" opacity="0.55">
+              <path d="M 40 360 Q 180 320 300 360 T 560 360" />
+              <path d="M 40 400 Q 200 360 300 400 T 560 400" />
+              <path d="M 40 440 Q 180 400 300 440 T 560 440" opacity="0.7" />
+              <path d="M 40 480 Q 220 440 300 480 T 560 480" opacity="0.5" />
+              <path d="M 40 520 Q 180 480 300 520 T 560 520" opacity="0.35" />
+            </g>
+            <path d="M 40 300 Q 300 282 560 300" stroke="#4CC6D6" stroke-width="0.9" fill="none" opacity="0.6" />
+            <path d="M 40 302 Q 300 320 560 302" stroke="#FAF7F1" stroke-width="0.6" fill="none" opacity="0.45" />
+          </g>
+          <circle cx="300" cy="300" r="2.5" fill="#4CC6D6">
+            <animate attributeName="r" values="2.5;5;2.5" dur="3.4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="1;0.3;1" dur="3.4s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+      </div>
+
+      <div class="hero-inner">
+        <span class="eyebrow reveal" data-i18n="hero.eyebrow">A small studio for intelligent web &amp; systems</span>
+        <h1 class="display-xxl reveal" data-delay="1" data-i18n-html="hero.h1">
+          We design<br>
+          systems<span class="stop">.</span>
+        </h1>
+        <p class="lede sub reveal" data-delay="2" data-i18n="hero.lede">
+          ZENEX is a studio crafting websites, web apps, and AI automation
+          for teams who want their digital surface to feel as considered as everything else they make.
+          We write, design, code, and ship — all under one roof.
+        </p>
+        <div class="cta-row reveal" data-delay="3">
+          <a class="btn primary" href="#contact">
+            <span data-i18n="hero.cta_primary">Start a project</span> <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn ghost" href="#services" data-i18n="hero.cta_secondary">See what we craft</a>
+          <span class="meta" data-i18n="hero.meta">Currently booking · spring 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         §01 — Services (tablist)
+         ========================================================= -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="s-head reveal">
+          <span class="num" data-i18n="services.num">01 / What we do</span>
+          <div>
+            <h2 class="display-xl title" data-i18n-html="services.title">Four practices.<br>One studio.</h2>
+            <p class="desc" data-i18n="services.desc">
+              Most projects use two or three of these in combination. Click any card to see how we approach that practice in detail.
+            </p>
+          </div>
+        </header>
+
+        <div class="services" role="tablist" aria-label="Practices">
+          <article class="service feature is-active reveal" role="tab" tabindex="0" aria-selected="true" aria-controls="panel-web" data-target="web" data-delay="1">
+            <div class="glyph">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <rect x="3" y="4" width="14" height="12" rx="2" fill="none" stroke="#fff" stroke-width="1.4" />
+                <path d="M 3 8 L 17 8" stroke="#fff" stroke-width="1.4" />
+                <circle cx="5.5" cy="6" r="0.6" fill="#fff" />
+              </svg>
+            </div>
+            <span class="service-flag" data-i18n="services.flag">Our craft</span>
+            <h3 data-i18n="services.web.title">Website design &amp; development</h3>
+            <p data-i18n="services.web.body">We design and build your website end to end — the pages that introduce you, tell your story, and sell what you do. Beautiful on phones and laptops, fast everywhere, and easy for your team to update.</p>
+            <span class="service-cue"><span data-i18n="services.cue">View details</span><span aria-hidden="true">↓</span></span>
+          </article>
+
+          <article class="service reveal" role="tab" tabindex="-1" aria-selected="false" aria-controls="panel-ai" data-target="ai" data-delay="2">
+            <div class="glyph">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M 4 10 Q 10 3 16 10 Q 10 17 4 10 Z" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" />
+                <circle cx="10" cy="10" r="1.8" fill="#fff" />
+              </svg>
+            </div>
+            <h3 data-i18n="services.ai.title">AI automation</h3>
+            <p data-i18n="services.ai.body">Custom agents, classifiers, evals, observability. Built for production — not for demos.</p>
+            <span class="service-cue"><span data-i18n="services.cue">View details</span><span aria-hidden="true">↓</span></span>
+          </article>
+
+          <article class="service reveal" role="tab" tabindex="-1" aria-selected="false" aria-controls="panel-int" data-target="int" data-delay="3">
+            <div class="glyph">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="5" cy="10" r="2.6" fill="none" stroke="#fff" stroke-width="1.4" />
+                <circle cx="15" cy="10" r="2.6" fill="none" stroke="#fff" stroke-width="1.4" />
+                <path d="M 7.6 10 L 12.4 10" stroke="#fff" stroke-width="1.4" />
+              </svg>
+            </div>
+            <h3 data-i18n="services.int.title">System integration</h3>
+            <p data-i18n="services.int.body">APIs, queues, ETL, webhooks. The dull, critical plumbing that lets your stack actually talk to itself.</p>
+            <span class="service-cue"><span data-i18n="services.cue">View details</span><span aria-hidden="true">↓</span></span>
+          </article>
+
+          <article class="service reveal" role="tab" tabindex="-1" aria-selected="false" aria-controls="panel-flow" data-target="flow" data-delay="4">
+            <div class="glyph">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M 2 13 Q 6 5 10 13 Q 14 21 18 13" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 data-i18n="services.flow.title">Workflow optimization</h3>
+            <p data-i18n="services.flow.body">Operations audit, opportunity sizing, the calm version of how the work should actually run.</p>
+            <span class="service-cue"><span data-i18n="services.cue">View details</span><span aria-hidden="true">↓</span></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         §02 — Practices in detail (tabbed)
+         ========================================================= -->
+    <section class="section mist" id="details">
+      <div class="wrap">
+        <header class="s-head reveal">
+          <span class="num" data-i18n="details.num">02 / Practices in detail</span>
+          <div>
+            <h2 class="display-xl title" data-i18n-html="details.title">A closer look<br>at the craft.</h2>
+            <p class="desc" data-i18n="details.desc">
+              Pick a practice above — or any tab below — to see what we actually build inside it.
+            </p>
+          </div>
+        </header>
+
+        <!-- sticky sub-tabs (in-section) -->
+        <div class="detail-tabs reveal" role="tablist" aria-label="Practice detail">
+          <button type="button" class="dt is-active" data-target="web" role="tab" aria-selected="true">
+            <span class="dt-num">01</span><span class="dt-l" data-i18n="details.tabs.web">Website</span>
+          </button>
+          <button type="button" class="dt" data-target="ai" role="tab" aria-selected="false">
+            <span class="dt-num">02</span><span class="dt-l" data-i18n="details.tabs.ai">AI automation</span>
+          </button>
+          <button type="button" class="dt" data-target="int" role="tab" aria-selected="false">
+            <span class="dt-num">03</span><span class="dt-l" data-i18n="details.tabs.int">Integration</span>
+          </button>
+          <button type="button" class="dt" data-target="flow" role="tab" aria-selected="false">
+            <span class="dt-num">04</span><span class="dt-l" data-i18n="details.tabs.flow">Workflow</span>
+          </button>
+        </div>
+
+        <!-- ============================================
+             Panel · Web
+             ============================================ -->
+        <div class="detail-panel is-active" id="panel-web" data-panel="web" role="tabpanel">
+          <div class="panel-intro">
+            <span class="panel-eyebrow" data-i18n="details.panels.web.eyebrow">Website design &amp; development</span>
+            <h3 class="display-l panel-title" data-i18n-html="details.panels.web.title">Websites,<br>built to be loved.</h3>
+            <p class="panel-desc" data-i18n="details.panels.web.desc">
+              Your website is often the first thing people see — and where they decide whether to stay or leave.
+              We design it to read clearly, load quickly, look right on every device, and stay easy for your team to update for years.
+            </p>
+          </div>
+
+          <div class="web-grid">
+            <!-- 01 Marketing -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <rect x="14" y="12" width="34" height="4" rx="1" fill="#0B1F3A" />
+                  <rect x="200" y="12" width="14" height="3" rx="1" fill="#5E564F" opacity="0.6" />
+                  <rect x="220" y="12" width="14" height="3" rx="1" fill="#5E564F" opacity="0.6" />
+                  <rect x="240" y="9" width="26" height="9" rx="4.5" fill="#1A1614" />
+                  <rect x="14" y="38" width="220" height="9" rx="1.5" fill="#1A1614" />
+                  <rect x="14" y="52" width="170" height="9" rx="1.5" fill="#1A1614" />
+                  <rect x="14" y="72" width="160" height="3" rx="1" fill="#5E564F" opacity="0.5" />
+                  <rect x="14" y="79" width="140" height="3" rx="1" fill="#5E564F" opacity="0.5" />
+                  <rect x="14" y="92" width="48" height="11" rx="5.5" fill="#1A1614" />
+                  <rect x="68" y="92" width="40" height="11" rx="5.5" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                  <rect x="14" y="114" width="252" height="18" rx="3" fill="#143A66" opacity="0.12" />
+                  <path d="M 14 124 Q 90 116 160 124 T 266 124" stroke="#2A98A6" stroke-width="0.5" fill="none" opacity="0.7" />
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">01</span>
+                <h4 data-i18n="details.panels.web.cards.1.title">Marketing &amp; brand websites</h4>
+              </div>
+              <p data-i18n="details.panels.web.cards.1.body">The storytelling site — the one that introduces your company, sells your product, and shows up in Google. We pair beautiful design with quick loads and a simple editor your team can use without calling a developer for every typo.</p>
+              <ul class="caps">
+                <li>Next.js · Astro · Eleventy</li>
+                <li data-i18n="details.panels.web.cards.1.cap2">Easy content editing for your team</li>
+                <li data-i18n="details.panels.web.cards.1.cap3">Drag-and-drop visual editing</li>
+                <li data-i18n="details.panels.web.cards.1.cap4">Top-tier Google scores</li>
+                <li data-i18n="details.panels.web.cards.1.cap5">Calm animation, no flash</li>
+              </ul>
+            </article>
+
+            <!-- 02 Web apps -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <rect x="0" y="0" width="60" height="140" fill="#1A1614" />
+                  <circle cx="14" cy="14" r="3" fill="#4CC6D6" />
+                  <rect x="22" y="12" width="22" height="4" rx="1" fill="#FAF7F1" opacity="0.95" />
+                  <g fill="#FAF7F1" opacity="0.55">
+                    <rect x="10" y="34" width="40" height="3.5" rx="1" />
+                    <rect x="10" y="44" width="32" height="3.5" rx="1" />
+                    <rect x="10" y="54" width="36" height="3.5" rx="1" />
+                    <rect x="10" y="64" width="28" height="3.5" rx="1" />
+                    <rect x="10" y="74" width="40" height="3.5" rx="1" />
+                  </g>
+                  <rect x="10" y="120" width="32" height="3" rx="1" fill="#FAF7F1" opacity="0.35" />
+                  <rect x="60" y="0" width="220" height="22" fill="#FAF7F1" />
+                  <rect x="60" y="21" width="220" height="0.6" fill="#1A1614" opacity="0.12" />
+                  <rect x="72" y="9" width="40" height="3.5" rx="1" fill="#1A1614" opacity="0.6" />
+                  <circle cx="266" cy="11" r="4" fill="#143A66" />
+                  <rect x="72" y="34" width="84" height="6" rx="1.5" fill="#1A1614" />
+                  <rect x="72" y="46" width="120" height="3" rx="1" fill="#5E564F" opacity="0.5" />
+                  <g>
+                    <rect x="72" y="60" width="60" height="36" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                    <rect x="78" y="66" width="20" height="3" rx="1" fill="#1A1614" opacity="0.6" />
+                    <rect x="78" y="74" width="40" height="9" rx="1.5" fill="#143A66" />
+                    <rect x="138" y="60" width="60" height="36" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                    <rect x="144" y="66" width="20" height="3" rx="1" fill="#1A1614" opacity="0.6" />
+                    <rect x="144" y="74" width="34" height="9" rx="1.5" fill="#2A98A6" />
+                    <rect x="204" y="60" width="60" height="36" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                    <rect x="210" y="66" width="20" height="3" rx="1" fill="#1A1614" opacity="0.6" />
+                    <rect x="210" y="74" width="28" height="9" rx="1.5" fill="#C8A85A" opacity="0.85" />
+                  </g>
+                  <rect x="72" y="108" width="190" height="14" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                  <rect x="78" y="113" width="50" height="3" rx="1" fill="#5E564F" opacity="0.45" />
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">02</span>
+                <h4 data-i18n="details.panels.web.cards.2.title">Web applications</h4>
+              </div>
+              <p data-i18n="details.panels.web.cards.2.body">Tools your customers log into — a member portal, a booking system, a custom platform built around the way your business actually works. With logins, payments, and the boring-but-essential plumbing underneath that keeps it running smoothly.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.web.cards.2.cap1">Modern, fast tech stack</li>
+                <li data-i18n="details.panels.web.cards.2.cap2">Logins, billing, permissions</li>
+                <li data-i18n="details.panels.web.cards.2.cap3">Live updates &amp; notifications</li>
+                <li data-i18n="details.panels.web.cards.2.cap4">Reliable, boring infrastructure</li>
+                <li data-i18n="details.panels.web.cards.2.cap5">Monitoring so we spot issues first</li>
+              </ul>
+            </article>
+
+            <!-- 03 Dashboards -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <g>
+                    <rect x="14" y="14" width="78" height="32" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.25" />
+                    <rect x="20" y="20" width="20" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                    <rect x="20" y="28" width="32" height="9" rx="1" fill="#0B1F3A" />
+                    <rect x="100" y="14" width="78" height="32" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.25" />
+                    <rect x="106" y="20" width="22" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                    <rect x="106" y="28" width="40" height="9" rx="1" fill="#0B1F3A" />
+                    <rect x="186" y="14" width="78" height="32" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.25" />
+                    <rect x="192" y="20" width="24" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                    <rect x="192" y="28" width="28" height="9" rx="1" fill="#2A98A6" />
+                  </g>
+                  <rect x="14" y="54" width="166" height="74" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.25" />
+                  <polyline points="22,118 40,108 58,114 76,96 94,100 112,84 130,90 148,76 166,80" fill="none" stroke="#0B1F3A" stroke-width="1" />
+                  <polyline points="22,122 40,118 58,120 76,110 94,114 112,104 130,108 148,98 166,102" fill="none" stroke="#4CC6D6" stroke-width="0.8" opacity="0.7" />
+                  <rect x="188" y="54" width="76" height="74" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.25" />
+                  <g fill="#5E564F" opacity="0.6">
+                    <rect x="194" y="60" width="40" height="2.5" rx="1" />
+                    <rect x="244" y="60" width="14" height="2.5" rx="1" />
+                  </g>
+                  <g>
+                    <rect x="194" y="74" width="34" height="2" rx="1" fill="#1A1614" opacity="0.65" />
+                    <rect x="244" y="74" width="14" height="2" rx="1" fill="#0B1F3A" />
+                    <rect x="194" y="86" width="40" height="2" rx="1" fill="#1A1614" opacity="0.65" />
+                    <rect x="244" y="86" width="14" height="2" rx="1" fill="#0B1F3A" />
+                    <rect x="194" y="98" width="28" height="2" rx="1" fill="#1A1614" opacity="0.65" />
+                    <rect x="244" y="98" width="14" height="2" rx="1" fill="#0B1F3A" />
+                    <rect x="194" y="110" width="34" height="2" rx="1" fill="#1A1614" opacity="0.65" />
+                    <rect x="244" y="110" width="14" height="2" rx="1" fill="#2A98A6" />
+                  </g>
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">03</span>
+                <h4 data-i18n="details.panels.web.cards.3.title">Dashboards &amp; internal tools</h4>
+              </div>
+              <p data-i18n="details.panels.web.cards.3.body">The interfaces your own team lives in — to manage orders, see what's happening, or run day-to-day operations. Designed so the next step is obvious and the right action takes one click, not five.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.web.cards.3.cap1">Lots of information, kept readable</li>
+                <li data-i18n="details.panels.web.cards.3.cap2">Keyboard shortcuts &amp; quick search</li>
+                <li data-i18n="details.panels.web.cards.3.cap3">Tables, filters &amp; exports done right</li>
+                <li data-i18n="details.panels.web.cards.3.cap4">Reusable building blocks</li>
+                <li data-i18n="details.panels.web.cards.3.cap5">Built so your team can run it</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="craft">
+            <div class="craft-head">
+              <span class="craft-l" data-i18n="craft.label">Design discipline · inside every web project</span>
+              <h3 class="craft-title" data-i18n="craft.title">Type, color, motion, components.</h3>
+            </div>
+            <div class="craft-grid">
+              <div class="craft-cell">
+                <div class="craft-vis craft-vis-type">
+                  <span class="big-aa">Aa</span>
+                  <span class="lil-line"></span>
+                  <span class="lil-line short"></span>
+                </div>
+                <h4 data-i18n="craft.items.type.title">Typography that reads</h4>
+                <p data-i18n="craft.items.type.body">Curated pairings, optical sizing, line-heights that breathe. Type is the first read, every time.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis craft-vis-color">
+                  <span class="sw" style="background:#0B1F3A;"></span>
+                  <span class="sw" style="background:#143A66;"></span>
+                  <span class="sw" style="background:#4CC6D6;"></span>
+                  <span class="sw" style="background:#EFEAE0;"></span>
+                  <span class="sw" style="background:#C8A85A;"></span>
+                </div>
+                <h4 data-i18n="craft.items.color.title">Palettes you can live in</h4>
+                <p data-i18n="craft.items.color.body">Tokens, not hex codes. Calm anchors, considered accents, and contrast you don't have to apologise for.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis craft-vis-comp">
+                  <span class="comp-btn">Primary</span>
+                  <span class="comp-input"></span>
+                  <span class="comp-chip"></span>
+                  <span class="comp-chip dark"></span>
+                </div>
+                <h4 data-i18n="craft.items.components.title">Components that compose</h4>
+                <p data-i18n="craft.items.components.body">A real design system, not a screenshot library. Documented, tested, and ready for your next page.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis craft-vis-motion">
+                  <svg viewBox="0 0 100 40" width="100%" height="100%">
+                    <path d="M 4 32 Q 30 4 50 24 Q 70 44 96 18" stroke="#0B1F3A" stroke-width="1.2" fill="none" stroke-linecap="round" />
+                    <circle cx="50" cy="24" r="2.4" fill="#4CC6D6" />
+                  </svg>
+                </div>
+                <h4 data-i18n="craft.items.motion.title">Motion with reason</h4>
+                <p data-i18n="craft.items.motion.body">Every transition earns its place. Nothing distracts, nothing slows the reader down, nothing fights reduced-motion.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="web-rail">
+            <span class="web-rail-l" data-i18n="details.panels.web.rail_label">Under every web engagement</span>
+            <div class="web-rail-items">
+              <span data-i18n="details.panels.web.rail.1">Accessibility (WCAG AA)</span>
+              <span data-i18n="details.panels.web.rail.2">Core Web Vitals budget</span>
+              <span data-i18n="details.panels.web.rail.3">Analytics &amp; instrumentation</span>
+              <span data-i18n="details.panels.web.rail.4">Design tokens &amp; system</span>
+              <span data-i18n="details.panels.web.rail.5">SEO &amp; structured data</span>
+              <span data-i18n="details.panels.web.rail.6">Documentation &amp; hand-off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================
+             Panel · AI automation
+             ============================================ -->
+        <div class="detail-panel" id="panel-ai" data-panel="ai" role="tabpanel" hidden>
+          <div class="panel-intro">
+            <span class="panel-eyebrow" data-i18n="details.panels.ai.eyebrow">AI automation</span>
+            <h3 class="display-l panel-title" data-i18n-html="details.panels.ai.title">Intelligence that<br>takes action.</h3>
+            <p class="panel-desc" data-i18n="details.panels.ai.desc">
+              From custom agents to evals — production-grade AI that earns its cost.
+              We build the patient, observable systems that turn models into reliable software.
+            </p>
+          </div>
+
+          <div class="web-grid">
+            <!-- AI 01 Agents -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- user msg -->
+                  <rect x="14" y="14" width="140" height="22" rx="6" fill="#EFEAE0" />
+                  <rect x="22" y="20" width="80" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                  <rect x="22" y="27" width="56" height="3" rx="1" fill="#1A1614" opacity="0.5" />
+                  <!-- assistant msg -->
+                  <rect x="126" y="42" width="140" height="36" rx="6" fill="#0B1F3A" />
+                  <rect x="134" y="48" width="100" height="3" rx="1" fill="#FAF7F1" opacity="0.95" />
+                  <rect x="134" y="55" width="90" height="3" rx="1" fill="#FAF7F1" opacity="0.7" />
+                  <rect x="134" y="62" width="70" height="3" rx="1" fill="#FAF7F1" opacity="0.7" />
+                  <rect x="134" y="69" width="50" height="3" rx="1" fill="#FAF7F1" opacity="0.55" />
+                  <!-- tool call -->
+                  <g>
+                    <rect x="14" y="86" width="252" height="20" rx="4" fill="none" stroke="#2A98A6" stroke-width="0.8" stroke-dasharray="3 3" />
+                    <circle cx="24" cy="96" r="3" fill="#4CC6D6" />
+                    <rect x="34" y="91" width="56" height="3" rx="1" fill="#2A98A6" />
+                    <rect x="34" y="98" width="120" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                    <rect x="246" y="92" width="12" height="8" rx="4" fill="#4CC6D6" opacity="0.2" />
+                  </g>
+                  <!-- second tool call -->
+                  <g>
+                    <rect x="14" y="112" width="252" height="18" rx="4" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.3" />
+                    <circle cx="24" cy="121" r="2.5" fill="#0B1F3A" />
+                    <rect x="34" y="117" width="40" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="34" y="123" width="110" height="2" rx="1" fill="#5E564F" opacity="0.5" />
+                  </g>
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">01</span>
+                <h4 data-i18n="details.panels.ai.cards.1.title">Agentic workflows</h4>
+              </div>
+              <p data-i18n="details.panels.ai.cards.1.body">Autonomous agents that take action — not just notify. Tool-calling, retries, human-in-the-loop where it matters, and observability around every step.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.ai.cards.1.cap1">OpenAI · Anthropic · open models</li>
+                <li data-i18n="details.panels.ai.cards.1.cap2">Tool calling &amp; function execution</li>
+                <li data-i18n="details.panels.ai.cards.1.cap3">Memory &amp; context handling</li>
+                <li data-i18n="details.panels.ai.cards.1.cap4">Human-approval steps where they matter</li>
+                <li data-i18n="details.panels.ai.cards.1.cap5">Cost &amp; latency budgets, enforced</li>
+              </ul>
+            </article>
+
+            <!-- AI 02 Classification & extraction -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- input column -->
+                  <g>
+                    <rect x="14" y="20" width="64" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                    <rect x="20" y="26" width="40" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="20" y="32" width="50" height="2" rx="1" fill="#5E564F" opacity="0.5" />
+
+                    <rect x="14" y="48" width="64" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                    <rect x="20" y="54" width="32" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="20" y="60" width="46" height="2" rx="1" fill="#5E564F" opacity="0.5" />
+
+                    <rect x="14" y="76" width="64" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                    <rect x="20" y="82" width="48" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="20" y="88" width="38" height="2" rx="1" fill="#5E564F" opacity="0.5" />
+
+                    <rect x="14" y="104" width="64" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.35" />
+                    <rect x="20" y="110" width="42" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="20" y="116" width="50" height="2" rx="1" fill="#5E564F" opacity="0.5" />
+                  </g>
+                  <!-- model node -->
+                  <circle cx="140" cy="70" r="22" fill="#0B1F3A" />
+                  <path d="M 132 70 Q 140 62 148 70 Q 140 78 132 70 Z" fill="none" stroke="#4CC6D6" stroke-width="1.2" />
+                  <circle cx="140" cy="70" r="2.5" fill="#4CC6D6" />
+                  <!-- lines from inputs to model -->
+                  <g stroke="#5E564F" stroke-width="0.6" opacity="0.5" fill="none">
+                    <path d="M 78 30 Q 100 30 118 60" />
+                    <path d="M 78 58 Q 100 58 118 66" />
+                    <path d="M 78 86 Q 100 86 118 74" />
+                    <path d="M 78 114 Q 100 114 118 80" />
+                  </g>
+                  <!-- lines from model to categories -->
+                  <g stroke="#2A98A6" stroke-width="0.7" opacity="0.7" fill="none">
+                    <path d="M 162 60 Q 180 40 198 36" />
+                    <path d="M 162 70 Q 180 70 198 70" />
+                    <path d="M 162 80 Q 180 100 198 104" />
+                  </g>
+                  <!-- category tags -->
+                  <rect x="198" y="28" width="68" height="16" rx="8" fill="#2A98A6" />
+                  <rect x="206" y="33" width="44" height="3" rx="1" fill="#FAF7F1" opacity="0.95" />
+                  <rect x="198" y="62" width="68" height="16" rx="8" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                  <rect x="206" y="67" width="32" height="3" rx="1" fill="#1A1614" opacity="0.7" />
+                  <rect x="198" y="96" width="68" height="16" rx="8" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                  <rect x="206" y="101" width="40" height="3" rx="1" fill="#1A1614" opacity="0.7" />
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">02</span>
+                <h4 data-i18n="details.panels.ai.cards.2.title">Classification &amp; extraction</h4>
+              </div>
+              <p data-i18n="details.panels.ai.cards.2.body">Turn unstructured input — emails, PDFs, tickets, calls — into the structured data your stack expects. Confidence-aware, with humans on the edges.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.ai.cards.2.cap1">Email · PDF · audio · web extraction</li>
+                <li data-i18n="details.panels.ai.cards.2.cap2">Custom schemas &amp; taxonomies</li>
+                <li data-i18n="details.panels.ai.cards.2.cap3">Active learning &amp; feedback loops</li>
+                <li data-i18n="details.panels.ai.cards.2.cap4">Confidence + uncertainty handling</li>
+                <li data-i18n="details.panels.ai.cards.2.cap5">Graceful fallback to humans</li>
+              </ul>
+            </article>
+
+            <!-- AI 03 Evals & observability -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <rect x="14" y="16" width="252" height="22" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.25" />
+                  <rect x="22" y="24" width="60" height="3" rx="1" fill="#1A1614" opacity="0.7" />
+                  <rect x="22" y="31" width="40" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+                  <circle cx="252" cy="27" r="5" fill="#4CC6D6" />
+                  <!-- score bars -->
+                  <g>
+                    <rect x="14" y="48" width="60" height="3" rx="1" fill="#5E564F" opacity="0.55" />
+                    <rect x="14" y="56" width="252" height="6" rx="3" fill="#EFEAE0" />
+                    <rect x="14" y="56" width="220" height="6" rx="3" fill="#0B1F3A" />
+                    <rect x="244" y="48" width="22" height="3" rx="1" fill="#0B1F3A" />
+                  </g>
+                  <g>
+                    <rect x="14" y="70" width="68" height="3" rx="1" fill="#5E564F" opacity="0.55" />
+                    <rect x="14" y="78" width="252" height="6" rx="3" fill="#EFEAE0" />
+                    <rect x="14" y="78" width="192" height="6" rx="3" fill="#2A98A6" />
+                    <rect x="240" y="70" width="26" height="3" rx="1" fill="#2A98A6" />
+                  </g>
+                  <g>
+                    <rect x="14" y="92" width="50" height="3" rx="1" fill="#5E564F" opacity="0.55" />
+                    <rect x="14" y="100" width="252" height="6" rx="3" fill="#EFEAE0" />
+                    <rect x="14" y="100" width="156" height="6" rx="3" fill="#C8A85A" />
+                    <rect x="240" y="92" width="22" height="3" rx="1" fill="#C8A85A" />
+                  </g>
+                  <!-- pass/fail row -->
+                  <g>
+                    <rect x="14" y="116" width="46" height="14" rx="3" fill="#0B1F3A" opacity="0.1" />
+                    <circle cx="22" cy="123" r="2.5" fill="#0B1F3A" />
+                    <rect x="30" y="121" width="22" height="3" rx="1" fill="#0B1F3A" opacity="0.8" />
+
+                    <rect x="66" y="116" width="46" height="14" rx="3" fill="#2A98A6" opacity="0.12" />
+                    <circle cx="74" cy="123" r="2.5" fill="#2A98A6" />
+                    <rect x="82" y="121" width="22" height="3" rx="1" fill="#2A98A6" />
+
+                    <rect x="118" y="116" width="46" height="14" rx="3" fill="#C8A85A" opacity="0.12" />
+                    <circle cx="126" cy="123" r="2.5" fill="#C8A85A" />
+                    <rect x="134" y="121" width="22" height="3" rx="1" fill="#1A1614" opacity="0.7" />
+
+                    <rect x="170" y="116" width="96" height="14" rx="3" fill="none" stroke="#1A1614" stroke-width="0.5" opacity="0.3" />
+                    <rect x="178" y="121" width="72" height="3" rx="1" fill="#5E564F" opacity="0.55" />
+                  </g>
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">03</span>
+                <h4 data-i18n="details.panels.ai.cards.3.title">Evals &amp; observability</h4>
+              </div>
+              <p data-i18n="details.panels.ai.cards.3.body">What ships to production gets measured. Every step, every cost, every regression — visible from day one, alerted before your users notice.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.ai.cards.3.cap1">Golden-set evals</li>
+                <li data-i18n="details.panels.ai.cards.3.cap2">Trace-level observability</li>
+                <li data-i18n="details.panels.ai.cards.3.cap3">Drift &amp; regression alerts</li>
+                <li data-i18n="details.panels.ai.cards.3.cap4">Cost &amp; latency dashboards</li>
+                <li data-i18n="details.panels.ai.cards.3.cap5">Versioned prompts &amp; models</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="craft">
+            <div class="craft-head">
+              <span class="craft-l" data-i18n="details.panels.ai.craft.label">AI discipline · inside every AI engagement</span>
+              <h3 class="craft-title" data-i18n="details.panels.ai.craft.title">What makes AI feel reliable.</h3>
+            </div>
+            <div class="craft-grid">
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <rect x="4" y="6" width="40" height="7" rx="3.5" fill="#0B1F3A" />
+                    <rect x="48" y="6" width="34" height="7" rx="3.5" fill="none" stroke="#0B1F3A" stroke-width="0.7" stroke-dasharray="2 2" />
+                    <rect x="4" y="22" width="112" height="3" rx="1.5" fill="#1A1614" opacity="0.45" />
+                    <rect x="4" y="29" width="82" height="3" rx="1.5" fill="#1A1614" opacity="0.45" />
+                    <rect x="4" y="45" width="28" height="7" rx="3.5" fill="#4CC6D6" />
+                    <rect x="36" y="45" width="72" height="7" rx="3.5" fill="#1A1614" opacity="0.15" />
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.ai.craft.items.1.title">Prompts, like an interface</h4>
+                <p data-i18n="details.panels.ai.craft.items.1.body">How we talk to the AI. We design the instructions like a UI — clear, tested with real examples, strict about the format that comes back. Answers stay consistent on the thousandth request, not just the demo.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <g>
+                      <circle cx="14" cy="14" r="4" fill="#2A98A6"/>
+                      <circle cx="32" cy="14" r="4" fill="#2A98A6"/>
+                      <circle cx="50" cy="14" r="4" fill="#2A98A6"/>
+                      <circle cx="68" cy="14" r="4" fill="#2A98A6"/>
+                      <circle cx="86" cy="14" r="4" fill="#2A98A6"/>
+                      <circle cx="104" cy="14" r="4" fill="#C8A85A"/>
+                      <circle cx="14" cy="32" r="4" fill="#2A98A6"/>
+                      <circle cx="32" cy="32" r="4" fill="#2A98A6"/>
+                      <circle cx="50" cy="32" r="4" fill="#0B1F3A" opacity="0.85" />
+                      <circle cx="68" cy="32" r="4" fill="#2A98A6"/>
+                      <circle cx="86" cy="32" r="4" fill="#2A98A6"/>
+                      <circle cx="104" cy="32" r="4" fill="#2A98A6"/>
+                      <circle cx="14" cy="50" r="4" fill="#2A98A6"/>
+                      <circle cx="32" cy="50" r="4" fill="#2A98A6"/>
+                      <circle cx="50" cy="50" r="4" fill="#2A98A6"/>
+                      <circle cx="68" cy="50" r="4" fill="#2A98A6"/>
+                      <circle cx="86" cy="50" r="4" fill="#2A98A6"/>
+                      <circle cx="104" cy="50" r="4" fill="#2A98A6"/>
+                    </g>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.ai.craft.items.2.title">Evals everywhere</h4>
+                <p data-i18n="details.panels.ai.craft.items.2.body">How we know it's still good. Every change runs against a library of known cases before shipping — we compare answers against an approved set and flag anything that drifted. Quality is measured, not hoped for.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <text x="4" y="10" font-family="JetBrains Mono, monospace" font-size="7" fill="#0B1F3A">$0.04</text>
+                    <text x="116" y="10" font-family="JetBrains Mono, monospace" font-size="7" fill="#5E564F" text-anchor="end">cost</text>
+                    <rect x="0" y="14" width="120" height="8" rx="4" fill="#EFEAE0" />
+                    <rect x="0" y="14" width="52" height="8" rx="4" fill="#0B1F3A" />
+                    <text x="4" y="36" font-family="JetBrains Mono, monospace" font-size="7" fill="#2A98A6">1.2s</text>
+                    <text x="116" y="36" font-family="JetBrains Mono, monospace" font-size="7" fill="#5E564F" text-anchor="end">latency</text>
+                    <rect x="0" y="40" width="120" height="8" rx="4" fill="#EFEAE0" />
+                    <rect x="0" y="40" width="82" height="8" rx="4" fill="#2A98A6" />
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.ai.craft.items.3.title">Cost &amp; speed budgets</h4>
+                <p data-i18n="details.panels.ai.craft.items.3.body">How we keep it cheap and fast. Each task gets a price and a time limit; easy work uses small, quick models, harder questions get smarter (slower) ones. We always pick the cheapest model that still does the job well.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <path d="M 60 6 L 78 12 L 78 30 Q 78 46 60 54 Q 42 46 42 30 L 42 12 Z" fill="#0B1F3A" />
+                    <path d="M 51 30 L 57 36 L 68 24" stroke="#4CC6D6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="4" y="22" width="30" height="3" rx="1.5" fill="#1A1614" opacity="0.3"/>
+                    <rect x="4" y="32" width="22" height="3" rx="1.5" fill="#1A1614" opacity="0.3"/>
+                    <rect x="86" y="22" width="30" height="3" rx="1.5" fill="#1A1614" opacity="0.3"/>
+                    <rect x="94" y="32" width="22" height="3" rx="1.5" fill="#1A1614" opacity="0.3"/>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.ai.craft.items.4.title">Safety, contained</h4>
+                <p data-i18n="details.panels.ai.craft.items.4.body">How we keep mistakes small. Rules block bad outputs, every decision is logged with the reasoning behind it, and humans approve anything sensitive before it ships.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="web-rail">
+            <span class="web-rail-l" data-i18n="details.panels.ai.rail_label">Under every AI engagement</span>
+            <div class="web-rail-items">
+              <span data-i18n="details.panels.ai.rail.1">Eval coverage</span>
+              <span data-i18n="details.panels.ai.rail.2">Cost &amp; latency budgets</span>
+              <span data-i18n="details.panels.ai.rail.3">Versioned prompts &amp; models</span>
+              <span data-i18n="details.panels.ai.rail.4">Human-in-the-loop hooks</span>
+              <span data-i18n="details.panels.ai.rail.5">Audit trail</span>
+              <span data-i18n="details.panels.ai.rail.6">Documentation &amp; hand-off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================
+             Panel · System integration
+             ============================================ -->
+        <div class="detail-panel" id="panel-int" data-panel="int" role="tabpanel" hidden>
+          <div class="panel-intro">
+            <span class="panel-eyebrow" data-i18n="details.panels.int.eyebrow">System integration</span>
+            <h3 class="display-l panel-title" data-i18n-html="details.panels.int.title">A stack<br>that talks to itself.</h3>
+            <p class="panel-desc" data-i18n="details.panels.int.desc">
+              APIs, pipelines, consolidation — the patient, reliable plumbing that lets all the
+              tools you already pay for actually work as one system.
+            </p>
+          </div>
+
+          <div class="web-grid">
+            <!-- INT 01 APIs & webhooks -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- central API -->
+                  <rect x="116" y="58" width="48" height="24" rx="5" fill="#0B1F3A" />
+                  <rect x="124" y="64" width="14" height="3" rx="1" fill="#FAF7F1" />
+                  <rect x="124" y="71" width="32" height="3" rx="1" fill="#4CC6D6" opacity="0.85" />
+                  <!-- connectors -->
+                  <g stroke="#5E564F" stroke-width="0.7" fill="none" opacity="0.55">
+                    <path d="M 116 70 Q 80 70 50 30" />
+                    <path d="M 116 70 Q 60 70 28 70" />
+                    <path d="M 116 70 Q 80 70 50 110" />
+                    <path d="M 164 70 Q 200 70 230 30" />
+                    <path d="M 164 70 Q 220 70 252 70" />
+                    <path d="M 164 70 Q 200 70 230 110" />
+                  </g>
+                  <!-- nodes -->
+                  <g>
+                    <rect x="22" y="20" width="50" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                    <rect x="30" y="27" width="34" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="30" y="33" width="22" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="6" y="60" width="40" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                    <rect x="12" y="67" width="28" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="12" y="73" width="20" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="22" y="100" width="50" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                    <rect x="30" y="107" width="30" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="30" y="113" width="22" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="208" y="20" width="50" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                    <rect x="216" y="27" width="34" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="216" y="33" width="20" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="234" y="60" width="40" height="20" rx="3" fill="none" stroke="#2A98A6" stroke-width="0.8" />
+                    <rect x="240" y="67" width="28" height="3" rx="1" fill="#2A98A6" />
+                    <rect x="240" y="73" width="20" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="208" y="100" width="50" height="20" rx="3" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                    <rect x="216" y="107" width="30" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="216" y="113" width="22" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+                  </g>
+                  <!-- pulse on hub -->
+                  <circle cx="140" cy="70" r="2" fill="#4CC6D6">
+                    <animate attributeName="r" values="2;5;2" dur="2.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite" />
+                  </circle>
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">01</span>
+                <h4 data-i18n="details.panels.int.cards.1.title">APIs &amp; webhooks</h4>
+              </div>
+              <p data-i18n="details.panels.int.cards.1.body">REST, GraphQL, RPC, webhooks — whatever your partners speak. Built with idempotency, retries, and signatures done right.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.int.cards.1.cap1">REST · GraphQL · gRPC</li>
+                <li data-i18n="details.panels.int.cards.1.cap2">Idempotency &amp; retry safety</li>
+                <li data-i18n="details.panels.int.cards.1.cap3">Webhook signing &amp; replay</li>
+                <li data-i18n="details.panels.int.cards.1.cap4">Versioning &amp; deprecation paths</li>
+                <li data-i18n="details.panels.int.cards.1.cap5">OpenAPI &amp; SDK generation</li>
+              </ul>
+            </article>
+
+            <!-- INT 02 Data pipelines -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- pipeline lanes -->
+                  <g>
+                    <rect x="14" y="34" width="252" height="20" rx="4" fill="#EFEAE0" />
+                    <rect x="14" y="70" width="252" height="20" rx="4" fill="#EFEAE0" />
+                    <rect x="14" y="106" width="252" height="20" rx="4" fill="#EFEAE0" />
+                  </g>
+                  <!-- stations -->
+                  <g>
+                    <rect x="22" y="22" width="50" height="44" rx="4" fill="#0B1F3A" />
+                    <rect x="30" y="30" width="34" height="3" rx="1" fill="#FAF7F1" opacity="0.95" />
+                    <rect x="30" y="38" width="26" height="2.5" rx="1" fill="#4CC6D6" opacity="0.8" />
+                    <circle cx="35" cy="52" r="3" fill="#4CC6D6" opacity="0.8" />
+                    <rect x="42" y="50" width="20" height="2" rx="1" fill="#FAF7F1" opacity="0.7" />
+                    <rect x="42" y="55" width="12" height="2" rx="1" fill="#FAF7F1" opacity="0.7" />
+
+                    <rect x="116" y="58" width="48" height="44" rx="4" fill="none" stroke="#1A1614" stroke-width="0.8" />
+                    <rect x="124" y="66" width="32" height="3" rx="1" fill="#1A1614" opacity="0.8" />
+                    <rect x="124" y="74" width="24" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                    <g>
+                      <rect x="124" y="84" width="32" height="3" rx="1.5" fill="#2A98A6" />
+                      <rect x="124" y="91" width="22" height="3" rx="1.5" fill="#C8A85A" />
+                    </g>
+
+                    <rect x="208" y="94" width="50" height="32" rx="4" fill="#0B1F3A" opacity="0.9" />
+                    <rect x="216" y="102" width="34" height="3" rx="1" fill="#FAF7F1" opacity="0.95" />
+                    <rect x="216" y="110" width="26" height="2.5" rx="1" fill="#4CC6D6" opacity="0.8" />
+                  </g>
+                  <!-- flow arrows -->
+                  <g stroke="#2A98A6" stroke-width="1" fill="none">
+                    <path d="M 72 44 L 116 80" />
+                    <path d="M 164 80 L 208 110" />
+                  </g>
+                  <polygon points="116,80 110,76 110,84" fill="#2A98A6" />
+                  <polygon points="208,110 202,106 202,114" fill="#2A98A6" />
+                  <!-- labels -->
+                  <rect x="24" y="14" width="20" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                  <rect x="120" y="50" width="22" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                  <rect x="212" y="86" width="22" height="2.5" rx="1" fill="#5E564F" opacity="0.6" />
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">02</span>
+                <h4 data-i18n="details.panels.int.cards.2.title">Data pipelines</h4>
+              </div>
+              <p data-i18n="details.panels.int.cards.2.body">Move data between systems reliably. Queues, streams, batch jobs — at whatever volume and shape your business needs.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.int.cards.2.cap1">Postgres · Kafka · S3 · Snowflake</li>
+                <li data-i18n="details.panels.int.cards.2.cap2">ETL · ELT · CDC</li>
+                <li data-i18n="details.panels.int.cards.2.cap3">Backfills &amp; replays</li>
+                <li data-i18n="details.panels.int.cards.2.cap4">Dead-letter handling</li>
+                <li data-i18n="details.panels.int.cards.2.cap5">Schema evolution, gracefully</li>
+              </ul>
+            </article>
+
+            <!-- INT 03 Stack consolidation -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- before: scattered -->
+                  <g opacity="0.85">
+                    <rect x="14" y="18" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="44" y="14" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="74" y="22" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="18" y="40" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="50" y="46" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="80" y="40" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="14" y="66" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="48" y="72" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="78" y="68" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="18" y="92" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="52" y="98" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                    <rect x="80" y="92" width="22" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                  </g>
+                  <!-- arrow -->
+                  <g>
+                    <path d="M 124 70 L 156 70" stroke="#2A98A6" stroke-width="1.4" />
+                    <polygon points="156,70 150,65 150,75" fill="#2A98A6" />
+                    <rect x="124" y="55" width="32" height="3" rx="1" fill="#2A98A6" />
+                  </g>
+                  <!-- after: organised -->
+                  <g>
+                    <rect x="176" y="34" width="80" height="32" rx="4" fill="#0B1F3A" />
+                    <rect x="184" y="42" width="50" height="3" rx="1" fill="#FAF7F1" opacity="0.95" />
+                    <rect x="184" y="50" width="38" height="2.5" rx="1" fill="#4CC6D6" opacity="0.85" />
+                    <rect x="184" y="56" width="28" height="2.5" rx="1" fill="#4CC6D6" opacity="0.6" />
+
+                    <rect x="176" y="74" width="38" height="32" rx="4" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                    <rect x="182" y="80" width="22" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="182" y="87" width="18" height="2.5" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="218" y="74" width="38" height="32" rx="4" fill="none" stroke="#1A1614" stroke-width="0.7" />
+                    <rect x="224" y="80" width="22" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="224" y="87" width="18" height="2.5" rx="1" fill="#5E564F" opacity="0.55" />
+                  </g>
+                  <!-- caption bars -->
+                  <rect x="22" y="120" width="74" height="3" rx="1" fill="#5E564F" opacity="0.5" />
+                  <rect x="190" y="120" width="62" height="3" rx="1" fill="#0B1F3A" opacity="0.55" />
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">03</span>
+                <h4 data-i18n="details.panels.int.cards.3.title">Stack consolidation</h4>
+              </div>
+              <p data-i18n="details.panels.int.cards.3.body">Audit the tools you've collected, find the overlap, design the smaller stack. Most teams can shed half their SaaS bill without losing capability.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.int.cards.3.cap1">Tool &amp; contract audit</li>
+                <li data-i18n="details.panels.int.cards.3.cap2">Data ownership mapping</li>
+                <li data-i18n="details.panels.int.cards.3.cap3">Migration playbooks</li>
+                <li data-i18n="details.panels.int.cards.3.cap4">Risk-managed cutovers</li>
+                <li data-i18n="details.panels.int.cards.3.cap5">Hand-over documentation</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="craft">
+            <div class="craft-head">
+              <span class="craft-l" data-i18n="details.panels.int.craft.label">Integration discipline · inside every integration engagement</span>
+              <h3 class="craft-title" data-i18n="details.panels.int.craft.title">What makes connections stay solid.</h3>
+            </div>
+            <div class="craft-grid">
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <rect x="4" y="6" width="20" height="14" rx="3" fill="#EFEAE0" stroke="#1A1614" stroke-width="0.6"/>
+                    <rect x="4" y="24" width="20" height="14" rx="3" fill="#EFEAE0" stroke="#1A1614" stroke-width="0.6"/>
+                    <rect x="4" y="42" width="20" height="14" rx="3" fill="#EFEAE0" stroke="#1A1614" stroke-width="0.6"/>
+                    <path d="M 26 13 L 56 30" stroke="#5E564F" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <path d="M 26 31 L 56 31" stroke="#5E564F" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <path d="M 26 49 L 56 32" stroke="#5E564F" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <rect x="58" y="22" width="58" height="18" rx="4" fill="#0B1F3A" />
+                    <path d="M 67 31 L 73 37 L 84 25" stroke="#4CC6D6" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="90" y="28" width="22" height="2.5" rx="1" fill="#FAF7F1" opacity="0.7"/>
+                    <rect x="90" y="33" width="14" height="2.5" rx="1" fill="#FAF7F1" opacity="0.5"/>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.int.craft.items.1.title">Idempotency · safe to repeat</h4>
+                <p data-i18n="details.panels.int.craft.items.1.body">Click twice, charge once. Every request is designed so repeating it can't cause a second side effect — critical when networks hiccup and systems retry on their own.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <path d="M 30 36 A 16 16 0 1 1 46 22" stroke="#2A98A6" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+                    <polygon points="46,22 40,18 41,26" fill="#2A98A6"/>
+                    <rect x="66" y="12" width="48" height="8" rx="2" fill="#EFEAE0"/>
+                    <rect x="66" y="12" width="14" height="8" rx="2" fill="#2A98A6"/>
+                    <rect x="66" y="26" width="48" height="8" rx="2" fill="#EFEAE0"/>
+                    <rect x="66" y="26" width="26" height="8" rx="2" fill="#2A98A6"/>
+                    <rect x="66" y="40" width="48" height="8" rx="2" fill="#EFEAE0"/>
+                    <rect x="66" y="40" width="48" height="8" rx="2" fill="#0B1F3A"/>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.int.craft.items.2.title">Smart retries</h4>
+                <p data-i18n="details.panels.int.craft.items.2.body">When a service stumbles, we try again the right way. Short waits at first, longer if it keeps failing, and a holding queue for anything that never recovers — so nothing silently disappears.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <line x1="4" y1="50" x2="116" y2="50" stroke="#1A1614" stroke-width="0.4" opacity="0.18"/>
+                    <polyline points="4,40 18,32 32,36 46,28 60,30 74,18 88,24 102,16 116,22" fill="none" stroke="#0B1F3A" stroke-width="1.3" stroke-linecap="round"/>
+                    <circle cx="74" cy="18" r="3.5" fill="#C8A85A" />
+                    <circle cx="74" cy="18" r="6" fill="none" stroke="#C8A85A" stroke-width="0.7" opacity="0.55"/>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.int.craft.items.3.title">Observability</h4>
+                <p data-i18n="details.panels.int.craft.items.3.body">We can see everything that happened. Every call, every error, every slow response is recorded with the full context — so when something breaks we find the cause in minutes, not hours.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <rect x="6" y="22" width="26" height="16" rx="8" fill="none" stroke="#0B1F3A" stroke-width="0.7"/>
+                    <text x="19" y="33" font-family="JetBrains Mono, monospace" font-size="8" fill="#0B1F3A" text-anchor="middle">v1</text>
+                    <path d="M 32 30 L 44 30" stroke="#5E564F" stroke-width="0.8"/>
+                    <polygon points="44,30 40,27 40,33" fill="#5E564F"/>
+                    <rect x="46" y="22" width="26" height="16" rx="8" fill="none" stroke="#2A98A6" stroke-width="0.9"/>
+                    <text x="59" y="33" font-family="JetBrains Mono, monospace" font-size="8" fill="#2A98A6" text-anchor="middle">v2</text>
+                    <path d="M 72 30 L 84 30" stroke="#5E564F" stroke-width="0.8"/>
+                    <polygon points="84,30 80,27 80,33" fill="#5E564F"/>
+                    <rect x="86" y="22" width="28" height="16" rx="8" fill="#0B1F3A"/>
+                    <text x="100" y="33" font-family="JetBrains Mono, monospace" font-size="8" fill="#FAF7F1" text-anchor="middle">v3</text>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.int.craft.items.4.title">Versioning</h4>
+                <p data-i18n="details.panels.int.craft.items.4.body">Change without breaking what's there. New features live alongside old ones, with documentation and a published timeline before anything goes away — so integrations never wake up to a surprise.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="web-rail">
+            <span class="web-rail-l" data-i18n="details.panels.int.rail_label">Under every integration engagement</span>
+            <div class="web-rail-items">
+              <span data-i18n="details.panels.int.rail.1">Idempotency &amp; retries</span>
+              <span data-i18n="details.panels.int.rail.2">Monitoring &amp; alerts</span>
+              <span data-i18n="details.panels.int.rail.3">OpenAPI specs</span>
+              <span data-i18n="details.panels.int.rail.4">Versioning paths</span>
+              <span data-i18n="details.panels.int.rail.5">Backfills &amp; replays</span>
+              <span data-i18n="details.panels.int.rail.6">Documentation &amp; hand-off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================
+             Panel · Workflow optimization
+             ============================================ -->
+        <div class="detail-panel" id="panel-flow" data-panel="flow" role="tabpanel" hidden>
+          <div class="panel-intro">
+            <span class="panel-eyebrow" data-i18n="details.panels.flow.eyebrow">Workflow optimization</span>
+            <h3 class="display-l panel-title" data-i18n-html="details.panels.flow.title">The calm version<br>of how it should run.</h3>
+            <p class="panel-desc" data-i18n="details.panels.flow.desc">
+              We map your current operations, find the leaks, and design the new way of working —
+              then make sure the team can measure whether it's actually better.
+            </p>
+          </div>
+
+          <div class="web-grid">
+            <!-- FLOW 01 Ops audit -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- swimlane bg -->
+                  <rect x="14" y="22" width="252" height="34" rx="3" fill="#EFEAE0" opacity="0.5" />
+                  <rect x="14" y="60" width="252" height="34" rx="3" fill="#EFEAE0" opacity="0.5" />
+                  <rect x="14" y="98" width="252" height="30" rx="3" fill="#EFEAE0" opacity="0.5" />
+                  <!-- nodes -->
+                  <g>
+                    <rect x="22" y="30" width="40" height="18" rx="3" fill="#0B1F3A" />
+                    <rect x="28" y="36" width="28" height="2.5" rx="1" fill="#FAF7F1" opacity="0.95" />
+                    <rect x="28" y="42" width="22" height="2" rx="1" fill="#4CC6D6" opacity="0.7" />
+
+                    <rect x="76" y="30" width="40" height="18" rx="3" fill="none" stroke="#1A1614" stroke-width="0.8" />
+                    <rect x="82" y="36" width="22" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="82" y="42" width="28" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="130" y="30" width="40" height="18" rx="3" fill="none" stroke="#1A1614" stroke-width="0.8" />
+                    <rect x="136" y="36" width="24" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="136" y="42" width="18" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <!-- bottleneck callout -->
+                    <rect x="184" y="28" width="44" height="22" rx="3" fill="none" stroke="#C8A85A" stroke-width="1.2" stroke-dasharray="3 2" />
+                    <rect x="190" y="36" width="30" height="2.5" rx="1" fill="#C8A85A" />
+                    <rect x="190" y="42" width="22" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="76" y="68" width="40" height="18" rx="3" fill="none" stroke="#1A1614" stroke-width="0.8" />
+                    <rect x="82" y="74" width="22" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="82" y="80" width="28" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="184" y="68" width="44" height="18" rx="3" fill="none" stroke="#1A1614" stroke-width="0.8" />
+                    <rect x="190" y="74" width="22" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="190" y="80" width="28" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="76" y="104" width="40" height="18" rx="3" fill="none" stroke="#1A1614" stroke-width="0.8" />
+                    <rect x="82" y="110" width="22" height="2.5" rx="1" fill="#1A1614" opacity="0.7" />
+                    <rect x="82" y="116" width="28" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <rect x="184" y="104" width="44" height="18" rx="3" fill="#2A98A6" opacity="0.15" />
+                    <rect x="184" y="104" width="44" height="18" rx="3" fill="none" stroke="#2A98A6" stroke-width="0.8" />
+                    <rect x="190" y="110" width="22" height="2.5" rx="1" fill="#2A98A6" />
+                    <rect x="190" y="116" width="28" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+                  </g>
+                  <!-- arrows -->
+                  <g stroke="#5E564F" stroke-width="0.6" fill="none" opacity="0.7">
+                    <path d="M 62 39 L 76 39" />
+                    <path d="M 116 39 L 130 39" />
+                    <path d="M 170 39 L 184 39" />
+                    <path d="M 96 48 L 96 68" />
+                    <path d="M 116 77 L 184 77" />
+                    <path d="M 96 86 L 96 104" />
+                    <path d="M 116 113 L 184 113" />
+                  </g>
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">01</span>
+                <h4 data-i18n="details.panels.flow.cards.1.title">Operations audit</h4>
+              </div>
+              <p data-i18n="details.panels.flow.cards.1.body">We map your current workflows end to end — who does what, with which tool, how long it takes, and where the leaks are.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.flow.cards.1.cap1">Process-mapping interviews</li>
+                <li data-i18n="details.panels.flow.cards.1.cap2">Time-and-motion analysis</li>
+                <li data-i18n="details.panels.flow.cards.1.cap3">Cost-of-delay calculation</li>
+                <li data-i18n="details.panels.flow.cards.1.cap4">Bottleneck identification</li>
+                <li data-i18n="details.panels.flow.cards.1.cap5">Stakeholder alignment</li>
+              </ul>
+            </article>
+
+            <!-- FLOW 02 SOPs -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- doc -->
+                  <rect x="42" y="14" width="196" height="116" rx="4" fill="#FAF7F1" stroke="#1A1614" stroke-width="0.6" />
+                  <rect x="42" y="14" width="196" height="20" rx="4" fill="#0B1F3A" />
+                  <rect x="50" y="22" width="56" height="3" rx="1" fill="#FAF7F1" opacity="0.95" />
+                  <rect x="50" y="28" width="34" height="2" rx="1" fill="#4CC6D6" opacity="0.85" />
+                  <rect x="224" y="22" width="10" height="3" rx="1" fill="#FAF7F1" opacity="0.7" />
+                  <!-- numbered steps -->
+                  <g>
+                    <circle cx="58" cy="48" r="6" fill="#0B1F3A" />
+                    <rect x="55" y="46" width="6" height="3" rx="1" fill="#FAF7F1" />
+                    <rect x="72" y="44" width="120" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="72" y="50" width="90" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <circle cx="58" cy="68" r="6" fill="#0B1F3A" />
+                    <rect x="55" y="66" width="6" height="3" rx="1" fill="#FAF7F1" />
+                    <rect x="72" y="64" width="140" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="72" y="70" width="100" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <circle cx="58" cy="88" r="6" fill="#0B1F3A" />
+                    <rect x="55" y="86" width="6" height="3" rx="1" fill="#FAF7F1" />
+                    <rect x="72" y="84" width="110" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="72" y="90" width="80" height="2" rx="1" fill="#5E564F" opacity="0.55" />
+
+                    <circle cx="58" cy="108" r="6" fill="#2A98A6" />
+                    <path d="M 55 108 L 58 110 L 62 106" stroke="#FAF7F1" stroke-width="1" fill="none" />
+                    <rect x="72" y="104" width="124" height="3" rx="1" fill="#1A1614" opacity="0.75" />
+                    <rect x="72" y="110" width="60" height="2" rx="1" fill="#2A98A6" />
+                  </g>
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">02</span>
+                <h4 data-i18n="details.panels.flow.cards.2.title">SOPs &amp; playbooks</h4>
+              </div>
+              <p data-i18n="details.panels.flow.cards.2.body">The new way of working, written down. Clear enough that the next hire can pick it up on day three.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.flow.cards.2.cap1">Living documentation</li>
+                <li data-i18n="details.panels.flow.cards.2.cap2">Decision trees &amp; playbooks</li>
+                <li data-i18n="details.panels.flow.cards.2.cap3">Onboarding tracks</li>
+                <li data-i18n="details.panels.flow.cards.2.cap4">Versioned &amp; searchable</li>
+                <li data-i18n="details.panels.flow.cards.2.cap5">Owned by the team, not the studio</li>
+              </ul>
+            </article>
+
+            <!-- FLOW 03 KPIs -->
+            <article class="web-card">
+              <div class="web-preview">
+                <svg viewBox="0 0 280 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect width="280" height="140" rx="6" fill="#FAF7F1" />
+                  <!-- big metric tile -->
+                  <rect x="14" y="14" width="146" height="112" rx="4" fill="#0B1F3A" />
+                  <rect x="24" y="24" width="56" height="3" rx="1" fill="#4CC6D6" opacity="0.85" />
+                  <rect x="24" y="32" width="44" height="2.5" rx="1" fill="#FAF7F1" opacity="0.55" />
+                  <text x="24" y="78" font-family="Space Grotesk, system-ui" font-size="36" font-weight="500" letter-spacing="-2" fill="#FAF7F1">−72%</text>
+                  <rect x="24" y="92" width="80" height="3" rx="1" fill="#FAF7F1" opacity="0.7" />
+                  <rect x="24" y="100" width="60" height="2.5" rx="1" fill="#FAF7F1" opacity="0.5" />
+                  <!-- sparkline -->
+                  <polyline points="24,118 36,112 50,114 64,108 78,110 92,100 106,102 120,94 134,88 148,82" fill="none" stroke="#4CC6D6" stroke-width="1.2" />
+                  <!-- side cards -->
+                  <rect x="170" y="14" width="96" height="36" rx="4" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                  <rect x="178" y="22" width="40" height="2.5" rx="1" fill="#5E564F" opacity="0.55" />
+                  <rect x="178" y="32" width="50" height="9" rx="1.5" fill="#0B1F3A" />
+
+                  <rect x="170" y="58" width="96" height="36" rx="4" fill="none" stroke="#1A1614" stroke-width="0.6" />
+                  <rect x="178" y="66" width="34" height="2.5" rx="1" fill="#5E564F" opacity="0.55" />
+                  <rect x="178" y="76" width="40" height="9" rx="1.5" fill="#2A98A6" />
+
+                  <rect x="170" y="102" width="96" height="24" rx="4" fill="#C8A85A" opacity="0.15" />
+                  <circle cx="180" cy="114" r="3" fill="#C8A85A" />
+                  <rect x="188" y="112" width="50" height="2.5" rx="1" fill="#C8A85A" />
+                  <rect x="188" y="118" width="40" height="2" rx="1" fill="#1A1614" opacity="0.65" />
+                </svg>
+              </div>
+              <div class="web-card-head">
+                <span class="web-num">03</span>
+                <h4 data-i18n="details.panels.flow.cards.3.title">KPIs &amp; instrumentation</h4>
+              </div>
+              <p data-i18n="details.panels.flow.cards.3.body">If we can't measure it, we didn't change it. Every workflow ships with a dashboard and a review cadence baked in.</p>
+              <ul class="caps">
+                <li data-i18n="details.panels.flow.cards.3.cap1">Leading &amp; lagging metrics</li>
+                <li data-i18n="details.panels.flow.cards.3.cap2">Operational dashboards</li>
+                <li data-i18n="details.panels.flow.cards.3.cap3">Anomaly alerts</li>
+                <li data-i18n="details.panels.flow.cards.3.cap4">Weekly review cadence</li>
+                <li data-i18n="details.panels.flow.cards.3.cap5">Quarterly retrospectives</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="craft">
+            <div class="craft-head">
+              <span class="craft-l" data-i18n="details.panels.flow.craft.label">Workflow discipline · inside every workflow engagement</span>
+              <h3 class="craft-title" data-i18n="details.panels.flow.craft.title">What makes a new process stick.</h3>
+            </div>
+            <div class="craft-grid">
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <rect x="4" y="22" width="20" height="14" rx="2" fill="#0B1F3A"/>
+                    <rect x="34" y="8" width="20" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.7"/>
+                    <rect x="34" y="38" width="20" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.7"/>
+                    <rect x="64" y="22" width="20" height="14" rx="2" fill="none" stroke="#1A1614" stroke-width="0.7"/>
+                    <rect x="94" y="22" width="22" height="14" rx="2" fill="#2A98A6" opacity="0.18"/>
+                    <rect x="94" y="22" width="22" height="14" rx="2" fill="none" stroke="#2A98A6" stroke-width="0.9"/>
+                    <path d="M 24 26 L 34 15" stroke="#5E564F" stroke-width="0.7" fill="none"/>
+                    <path d="M 24 32 L 34 45" stroke="#5E564F" stroke-width="0.7" fill="none"/>
+                    <path d="M 54 15 L 64 26" stroke="#5E564F" stroke-width="0.7" fill="none"/>
+                    <path d="M 54 45 L 64 32" stroke="#5E564F" stroke-width="0.7" fill="none"/>
+                    <path d="M 84 29 L 94 29" stroke="#5E564F" stroke-width="0.7" fill="none"/>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.flow.craft.items.1.title">Process mapping</h4>
+                <p data-i18n="details.panels.flow.craft.items.1.body">We draw your work, step by step. Who does what, with which tool, in what order — including the waits and handoffs nobody notices anymore. Once it's on a wall, the bottlenecks are obvious.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <line x1="6" y1="52" x2="114" y2="52" stroke="#1A1614" stroke-width="0.4" opacity="0.2"/>
+                    <rect x="10" y="38" width="14" height="14" fill="#0B1F3A" opacity="0.4"/>
+                    <rect x="30" y="30" width="14" height="22" fill="#0B1F3A" opacity="0.55"/>
+                    <rect x="50" y="24" width="14" height="28" fill="#0B1F3A" opacity="0.7"/>
+                    <rect x="70" y="18" width="14" height="34" fill="#0B1F3A" opacity="0.85"/>
+                    <rect x="90" y="10" width="14" height="42" fill="#2A98A6"/>
+                    <text x="114" y="14" font-family="JetBrains Mono, monospace" font-size="7" fill="#2A98A6" text-anchor="end">+38%</text>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.flow.craft.items.2.title">Measurement</h4>
+                <p data-i18n="details.panels.flow.craft.items.2.body">Before and after, in numbers. We pick the few metrics that actually matter — time saved, errors caught, tickets cleared — and watch them move. No vibes, just proof.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <circle cx="10" cy="12" r="5" fill="#0B1F3A"/>
+                    <text x="10" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#FAF7F1" text-anchor="middle">1</text>
+                    <rect x="20" y="9" width="80" height="3" rx="1.5" fill="#1A1614" opacity="0.7"/>
+                    <rect x="20" y="15" width="60" height="2.5" rx="1" fill="#5E564F" opacity="0.55"/>
+                    <circle cx="10" cy="30" r="5" fill="#0B1F3A"/>
+                    <text x="10" y="33" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#FAF7F1" text-anchor="middle">2</text>
+                    <rect x="20" y="27" width="70" height="3" rx="1.5" fill="#1A1614" opacity="0.7"/>
+                    <rect x="20" y="33" width="50" height="2.5" rx="1" fill="#5E564F" opacity="0.55"/>
+                    <circle cx="10" cy="48" r="5" fill="#2A98A6"/>
+                    <path d="M 7 48 L 9 50 L 13 46" stroke="#FAF7F1" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="20" y="45" width="76" height="3" rx="1.5" fill="#1A1614" opacity="0.7"/>
+                    <rect x="20" y="51" width="40" height="2.5" rx="1" fill="#2A98A6"/>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.flow.craft.items.3.title">Documentation</h4>
+                <p data-i18n="details.panels.flow.craft.items.3.body">The new way, written down. Playbooks with screenshots, decision trees for the tricky calls, and search that actually works. New hires get productive in days, not months.</p>
+              </div>
+              <div class="craft-cell">
+                <div class="craft-vis">
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <circle cx="28" cy="20" r="6" fill="#0B1F3A"/>
+                    <rect x="20" y="28" width="16" height="20" rx="3" fill="#0B1F3A"/>
+                    <circle cx="92" cy="20" r="6" fill="#2A98A6"/>
+                    <rect x="84" y="28" width="16" height="20" rx="3" fill="#2A98A6"/>
+                    <path d="M 42 36 L 78 36" stroke="#5E564F" stroke-width="1" stroke-dasharray="3 2"/>
+                    <polygon points="78,36 72,32 72,40" fill="#5E564F"/>
+                    <polygon points="42,36 48,32 48,40" fill="#5E564F"/>
+                  </svg>
+                </div>
+                <h4 data-i18n="details.panels.flow.craft.items.4.title">Adoption</h4>
+                <p data-i18n="details.panels.flow.craft.items.4.body">We help people actually use it. Training sessions, side-by-side support through the first cycle, and a feedback loop so the playbook stays alive. The team has to own it — we make sure they can.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="web-rail">
+            <span class="web-rail-l" data-i18n="details.panels.flow.rail_label">Under every workflow engagement</span>
+            <div class="web-rail-items">
+              <span data-i18n="details.panels.flow.rail.1">Stakeholder interviews</span>
+              <span data-i18n="details.panels.flow.rail.2">Process maps</span>
+              <span data-i18n="details.panels.flow.rail.3">Living playbooks</span>
+              <span data-i18n="details.panels.flow.rail.4">Operational dashboards</span>
+              <span data-i18n="details.panels.flow.rail.5">Training sessions</span>
+              <span data-i18n="details.panels.flow.rail.6">Quarterly retrospectives</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         §03 — How it works
+         ========================================================= -->
+    <section class="section" id="process">
+      <div class="wrap">
+        <header class="s-head reveal">
+          <span class="num" data-i18n="process.num">03 / How we work</span>
+          <div>
+            <h2 class="display-xl title" data-i18n-html="process.title">A calm,<br>three-phase engagement.</h2>
+            <p class="desc" data-i18n="process.desc">
+              No discovery theatre, no 80-page decks. We map, we build, we operate —
+              with working software at every checkpoint and an open Figma you can poke around in.
+            </p>
+          </div>
+        </header>
+
+        <div class="phases">
+          <article class="phase reveal" data-delay="1">
+            <span class="num" data-i18n="process.phases.1.num">Phase 01</span>
+            <h3 data-i18n="process.phases.1.title">Map</h3>
+            <p data-i18n="process.phases.1.body">A focused diagnostic. We map your audience, your work, and the surface area we're designing — then sketch the system that solves it.</p>
+          </article>
+          <article class="phase reveal" data-delay="2">
+            <span class="num" data-i18n="process.phases.2.num">Phase 02</span>
+            <h3 data-i18n="process.phases.2.title">Build</h3>
+            <p data-i18n="process.phases.2.body">Design and code, side by side. Regular demos, working pages and components at every step — never a slide deck pretending to be progress.</p>
+          </article>
+          <article class="phase reveal" data-delay="3">
+            <span class="num" data-i18n="process.phases.3.num">Phase 03</span>
+            <h3 data-i18n="process.phases.3.title">Operate</h3>
+            <p data-i18n="process.phases.3.body">We run it in production. Handle incidents, evolve the design, hand it off when it's stable — or stay on retainer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         §04 — Principles
+         ========================================================= -->
+    <section class="section dark" id="principles">
+      <div class="wrap">
+        <header class="s-head reveal">
+          <span class="num" data-i18n="principles.num">04 / Principles</span>
+          <div>
+            <h2 class="display-xl title" data-i18n-html="principles.title">How we think<br>about the work.</h2>
+            <p class="desc" data-i18n="principles.desc">
+              Six commitments we've made to ourselves — and to anyone who hires us.
+            </p>
+          </div>
+        </header>
+
+        <div class="principles-grid">
+          <article class="principle reveal" data-delay="1">
+            <span class="p-num">01</span>
+            <h3 data-i18n="principles.1.title">Design &amp; code, same hands</h3>
+            <p data-i18n="principles.1.body">The person designing the page is the person shipping it. No throws over the wall, no broken telephone.</p>
+          </article>
+          <article class="principle reveal" data-delay="2">
+            <span class="p-num">02</span>
+            <h3 data-i18n="principles.2.title">Senior, end-to-end</h3>
+            <p data-i18n="principles.2.body">The same people own the work from kick-off to hand-off. No subcontracting, no hand-offs to people you've never met.</p>
+          </article>
+          <article class="principle reveal" data-delay="3">
+            <span class="p-num">03</span>
+            <h3 data-i18n="principles.3.title">Quiet engineering</h3>
+            <p data-i18n="principles.3.body">Calm systems beat clever ones. We optimise for boring, observable, and dependable.</p>
+          </article>
+          <article class="principle reveal" data-delay="4">
+            <span class="p-num">04</span>
+            <h3 data-i18n="principles.4.title">Performance is design</h3>
+            <p data-i18n="principles.4.body">Speed isn't a tax we add at the end — it's a feature we ship on day one. Sub-second loads are non-negotiable.</p>
+          </article>
+          <article class="principle reveal" data-delay="1">
+            <span class="p-num">05</span>
+            <h3 data-i18n="principles.5.title">You can take it over</h3>
+            <p data-i18n="principles.5.body">We build so your team can own it. No proprietary frameworks, no vendor lock-in, no consulting tax.</p>
+          </article>
+          <article class="principle reveal" data-delay="2">
+            <span class="p-num">06</span>
+            <h3 data-i18n="principles.6.title">Tasteful AI</h3>
+            <p data-i18n="principles.6.body">Models where they earn their cost. Heuristics, rules, and humans everywhere else — by design.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         §05 — Contact
+         ========================================================= -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner">
+        <span class="eyebrow reveal" data-i18n="contact.num">05 / Let's talk</span>
+        <h2 class="display-xxl reveal" data-delay="1" data-i18n-html="contact.h2">
+          A website worth<br>making<span class="tide">?</span>
+        </h2>
+        <p class="lede reveal" data-delay="2" data-i18n="contact.lede" style="margin-top: 28px;">
+          We take on a small number of projects each season — so we can give each one the attention it deserves.
+          Tell us about yours.
+        </p>
+        <div class="contact-grid reveal" data-delay="3">
+          <div>
+            <div class="l" data-i18n="contact.new_l">New project</div>
+            <div class="v" style="margin-top:18px;">
+              <a class="btn primary" href="mailto:studio@zenex.com">
+                <span data-i18n="contact.book">Book a 30-min call</span> <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="l" data-i18n="contact.email_l">Direct</div>
+            <div class="v"><a href="mailto:studio@zenex.com">studio@zenex.com</a></div>
+          </div>
+          <div>
+            <div class="l" data-i18n="contact.general_l">General enquiries</div>
+            <div class="v"><a href="mailto:hello@zenex.com">hello@zenex.com</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Footer
+         ========================================================= -->
+    <footer class="site">
+      <div class="brand" style="font-size:11px;letter-spacing:0.22em;">
+        <svg class="mark" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:16px;height:16px;">
+          <circle cx="12" cy="12" r="10.4" stroke="currentColor" stroke-width="1.4" />
+          <path d="M 1.6 12 A 10.4 10.4 0 0 0 22.4 12 Z" fill="currentColor" />
+        </svg>
+        <span>ZENEX</span>
+      </div>
+      <div class="footer-note" data-i18n="footer.note">Designed and built, slowly, by the studio.</div>
+      <div class="right">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#details" data-i18n="nav.web">Practices</a>
+        <a href="#principles" data-i18n="nav.principles">Principles</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="tabs.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZENEX · Logo Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<style>
+  :root{
+    --navy:#0B1F3A; --deep:#143A66; --cyan:#4CC6D6; --paper:#FAF7F1;
+    --gold:#C8A85A; --ink:#1A1614; --soft:#5E564F;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .wrap{max-width:1080px;margin:0 auto;padding:80px 40px 120px;}
+  header.hd{border-bottom:1px solid rgba(26,22,20,.14);padding-bottom:32px;margin-bottom:56px;}
+  header.hd .ey{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--soft);}
+  header.hd h1{font-size:46px;font-weight:500;letter-spacing:-.01em;margin-top:14px;}
+  header.hd p{margin-top:14px;color:var(--soft);max-width:54ch;line-height:1.55;font-size:15px;}
+  section{margin-bottom:64px;}
+  .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+  .lbl::after{content:"";flex:1;height:1px;background:rgba(26,22,20,.12);}
+  .grid{display:grid;gap:18px;}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .cell{border:1px solid rgba(26,22,20,.14);border-radius:10px;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:180px;}
+  .cell.dark{background:var(--navy);border-color:transparent;}
+  .cell.ink{background:var(--ink);border-color:transparent;}
+  .cap{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:var(--soft);text-align:center;}
+  .cell.dark .cap,.cell.ink .cap{color:rgba(250,247,241,.6);}
+  svg.m{width:80px;height:80px;}
+  .lock{display:flex;align-items:center;gap:18px;}
+  .lock svg{width:60px;height:60px;}
+  .lock .wm{font-size:38px;font-weight:500;letter-spacing:.14em;}
+  .wm-navy{color:var(--navy);} .wm-paper{color:var(--paper);}
+  .swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+  .sw{border-radius:10px;overflow:hidden;border:1px solid rgba(26,22,20,.12);}
+  .sw .chip{height:78px;}
+  .sw .meta{padding:10px 12px;font-family:'JetBrains Mono',monospace;font-size:10px;line-height:1.5;}
+  .sw .nm{color:var(--ink);font-weight:500;} .sw .hx{color:var(--soft);text-transform:uppercase;}
+  .files{border:1px solid rgba(26,22,20,.14);border-radius:10px;overflow:hidden;}
+  .files .row{display:grid;grid-template-columns:1.4fr 2.4fr 1fr;gap:16px;padding:13px 20px;font-family:'JetBrains Mono',monospace;font-size:12px;border-top:1px solid rgba(26,22,20,.1);align-items:center;}
+  .files .row:first-child{border-top:none;background:rgba(26,22,20,.03);color:var(--soft);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;}
+  .files .row .pth{color:var(--navy);}
+  .files .row .ds{color:var(--soft);}
+  .files .row .fm{color:var(--ink);text-align:right;}
+  .clear{display:flex;gap:40px;flex-wrap:wrap;align-items:center;padding:8px 2px;}
+  .clear .demo{position:relative;}
+  .clear .demo svg{width:96px;height:96px;display:block;}
+  .clear .ring{position:absolute;inset:-18px;border:1px dashed var(--cyan);border-radius:8px;}
+  .clear small{color:var(--soft);font-size:13px;max-width:30ch;line-height:1.5;}
+  @media(max-width:760px){.g4,.g3{grid-template-columns:repeat(2,1fr);}.swatches{grid-template-columns:repeat(3,1fr);}.files .row{grid-template-columns:1fr;gap:4px;}.files .row .fm{text-align:left;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hd">
+    <div class="ey">Brand Asset Kit</div>
+    <h1>ZENEX — Logo</h1>
+    <p>The Horizon mark: a bisected sphere where ocean meets sky. Below: every variant, the palette, clear-space rules, and the full file manifest. Vector for everything, raster for favicons and quick drops.</p>
+  </header>
+
+  <section>
+    <div class="lbl">Primary mark</div>
+    <div class="grid g4">
+      <div class="cell"><svg class="m" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#0B1F3A" stroke-width="3"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#0B1F3A"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#4CC6D6" stroke-width="2.4"/></svg><div class="cap">PRIMARY · ON LIGHT</div></div>
+      <div class="cell dark"><svg class="m" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#FAF7F1" stroke-width="3"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#FAF7F1"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#4CC6D6" stroke-width="2.4"/></svg><div class="cap">REVERSED · ON DARK</div></div>
+      <div class="cell"><svg class="m" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#1A1614" stroke-width="3"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#1A1614"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#1A1614" stroke-width="2.4" opacity="0.4"/></svg><div class="cap">MONO · BLACK</div></div>
+      <div class="cell ink"><svg class="m" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#fff" stroke-width="3"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#fff"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.45"/></svg><div class="cap">MONO · WHITE</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lbl">Horizontal lockup &amp; wordmark</div>
+    <div class="grid g2">
+      <div class="cell"><div class="lock"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#0B1F3A" stroke-width="3"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#0B1F3A"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#4CC6D6" stroke-width="2.4"/></svg><span class="wm wm-navy">ZENEX</span></div><div class="cap">LOCKUP · ON LIGHT</div></div>
+      <div class="cell dark"><div class="lock"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#FAF7F1" stroke-width="3"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#FAF7F1"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#4CC6D6" stroke-width="2.4"/></svg><span class="wm wm-paper">ZENEX</span></div><div class="cap">LOCKUP · ON DARK</div></div>
+      <div class="cell"><span class="wm wm-navy">ZENEX</span><div class="cap">WORDMARK · SPACE GROTESK 500</div></div>
+      <div class="cell" style="background:#0B1F3A;border-color:transparent;"><svg class="m" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0B1F3A"/><g transform="translate(12,12) scale(0.625)"><circle cx="32" cy="32" r="27" fill="none" stroke="#FAF7F1" stroke-width="3.4"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#FAF7F1"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#4CC6D6" stroke-width="2.8"/></g></svg><div class="cap" style="color:rgba(250,247,241,.6)">FAVICON · ROUNDED TILE</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lbl">Clear space &amp; minimum size</div>
+    <div class="clear">
+      <div class="demo"><div class="ring"></div><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#0B1F3A" stroke-width="3"/><path d="M 5 32 A 27 27 0 0 0 59 32 Z" fill="#0B1F3A"/><path d="M 5 32 Q 32 26.5 59 32" fill="none" stroke="#4CC6D6" stroke-width="2.4"/></svg></div>
+      <small>Keep clear space of at least <b>½ the mark's diameter</b> on every side. Minimum legible size: <b>24px</b> for the mark, <b>96px</b> wide for the lockup.</small>
+    </div>
+  </section>
+
+  <section>
+    <div class="lbl">Palette</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#0B1F3A"></div><div class="meta"><div class="nm">Navy</div><div class="hx">#0B1F3A</div></div></div>
+      <div class="sw"><div class="chip" style="background:#143A66"></div><div class="meta"><div class="nm">Deep</div><div class="hx">#143A66</div></div></div>
+      <div class="sw"><div class="chip" style="background:#4CC6D6"></div><div class="meta"><div class="nm">Cyan</div><div class="hx">#4CC6D6</div></div></div>
+      <div class="sw"><div class="chip" style="background:#C8A85A"></div><div class="meta"><div class="nm">Gold</div><div class="hx">#C8A85A</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1A1614"></div><div class="meta"><div class="nm">Ink</div><div class="hx">#1A1614</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FAF7F1;border-bottom:1px solid rgba(26,22,20,.1)"></div><div class="meta"><div class="nm">Paper</div><div class="hx">#FAF7F1</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lbl">File manifest</div>
+    <div class="files">
+      <div class="row"><span>File</span><span>Use</span><span>Format</span></div>
+      <div class="row"><span class="pth">zenex-mark.svg</span><span class="ds">Primary mark, light backgrounds</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">zenex-mark-dark.svg</span><span class="ds">Reversed mark, dark backgrounds</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">zenex-mark-black.svg</span><span class="ds">Mono — print, stamps, single-color</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">zenex-mark-white.svg</span><span class="ds">Mono — knockout on photos</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">zenex-logo.svg</span><span class="ds">Horizontal lockup, light</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">zenex-logo-dark.svg</span><span class="ds">Horizontal lockup, dark</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">zenex-wordmark.svg</span><span class="ds">Type-only wordmark</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">favicon.svg</span><span class="ds">Browser tab / app icon (vector)</span><span class="fm">SVG</span></div>
+      <div class="row"><span class="pth">png/zenex-mark-{512,256,128,64,32}.png</span><span class="ds">Raster mark, transparent bg</span><span class="fm">PNG</span></div>
+      <div class="row"><span class="pth">png/zenex-mark-white-512.png</span><span class="ds">Raster reversed mark</span><span class="fm">PNG</span></div>
+      <div class="row"><span class="pth">png/favicon-{512,180,32,16}.png</span><span class="ds">Favicon · Apple touch icon</span><span class="fm">PNG</span></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
