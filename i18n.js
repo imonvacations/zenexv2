@@ -320,7 +320,7 @@
       hero: {
         eyebrow: 'Um pequeno estúdio para web e sistemas inteligentes',
         h1: 'Desenhamos<br>sistemas<span class="stop">.</span>',
-        lede: 'A ZENEX é um estúdio que constrói sites, aplicações web e automação com IA — para equipas que querem a sua presença digital tão cuidada como tudo o resto que fazem. Escrevemos, desenhamos, programamos e entregamos — tudo debaixo do mesmo tecto.',
+        lede: 'A ZENEX é um estúdio que constrói sites, aplicações web e automação com IA — para equipas que querem a sua presença digital tão cuidada como tudo o resto que fazem. Escrevemos, desenhamos, programamos e entregamos — tudo debaixo do mesmo teto.',
         cta_primary: 'Começar um projeto',
         cta_secondary: 'Ver o que criamos',
         meta: 'A aceitar projetos · primavera 2026',
@@ -362,7 +362,7 @@
           web: {
             eyebrow: 'Design e desenvolvimento web',
             title: 'Sites,<br>feitos para gostares.',
-            desc: 'O teu site é muitas vezes a primeira coisa que as pessoas vêem — e onde decidem se vale a pena ficar. Desenhamo-lo para se ler bem, carregar rápido, ficar certo em todos os ecrãs e continuar fácil de atualizar pela tua equipa, durante anos.',
+            desc: 'O teu site é muitas vezes a primeira coisa que as pessoas veem — e onde decidem se vale a pena ficar. Desenhamo-lo para se ler bem, carregar rápido, ficar certo em todos os ecrãs e continuar fácil de atualizar pela tua equipa, durante anos.',
             cards: {
               1: {
                 title: 'Sites de marca e marketing',
@@ -501,7 +501,7 @@
               title: 'O que torna as ligações sólidas.',
               items: {
                 1: { title: 'Idempotência · seguro repetir', body: 'Clica duas vezes, cobra uma. Cada pedido é desenhado para que repeti-lo nunca cause um segundo efeito — crítico quando a rede pisca e os sistemas tentam de novo por conta própria.' },
-                2: { title: 'Retries inteligentes', body: 'Quando um serviço tropea, tentamos de novo da forma certa. Esperas curtas no início, mais longas se continuar a falhar, e uma fila de retenção para o que nunca recupera — para nada desaparecer em silêncio.' },
+                2: { title: 'Retries inteligentes', body: 'Quando um serviço tropeça, tentamos de novo da forma certa. Esperas curtas no início, mais longas se continuar a falhar, e uma fila de retenção para o que nunca recupera — para nada desaparecer em silêncio.' },
                 3: { title: 'Observabilidade', body: 'Vemos tudo o que aconteceu. Cada chamada, cada erro, cada resposta lenta fica registada com o contexto completo — quando algo se parte, encontramos a causa em minutos, não horas.' },
                 4: { title: 'Versionamento', body: 'Mudar sem partir o que está. As funcionalidades novas convivem com as antigas, documentadas, com calendário publicado antes de algo desaparecer — as integrações nunca acordam para uma surpresa.' },
               },
