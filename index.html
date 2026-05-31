@@ -6,6 +6,11 @@
   <title>ZENEX · Intelligent systems for serious teams</title>
   <meta name="description" content="ZENEX is an intelligent systems studio. AI automation, web platforms, and integration — quietly engineered." />
 
+  <!-- Browser-tab icon (ZENEX mark) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="zenex-mark-64.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-512.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -13,10 +18,10 @@
   <script>
     (function () {
       try {
-        var t = localStorage.getItem('zenex-theme') || 'dark';
+        var t = localStorage.getItem('zenex-theme') || 'light';
         document.documentElement.setAttribute('data-theme', t);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
